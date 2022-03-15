@@ -1,0 +1,22 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "description": "this is for cypress practice",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cy:run": "node cypress.js",
+    "merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/output.json",
+    "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./ --inline",
+    "final_report": "npm run merge && npm run generate_mochawesome_report"
+  },
+  "author": "mikesunhaki",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.6.0",
+    "cypress-file-upload": "^4.1.1",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.1.0"
+  }
+}
