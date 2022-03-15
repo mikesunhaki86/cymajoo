@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-15T17:51:15.763Z",
+    "end": "2022-03-15T17:51:45.015Z",
+    "duration": 29252,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fce527be-6cea-469a-8994-8891d50be3d4",
+      "title": "",
+      "fullFile": "cypress/integration/Register/register.js",
+      "file": "cypress/integration/Register/register.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "754865f1-77e1-4639-82e5-1d8a3050139d",
+          "title": "Register",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "As a user, i want to register as valid Student",
+              "fullTitle": "Register As a user, i want to register as valid Student",
+              "timedOut": null,
+              "duration": 27157,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/Register/register.js/Register -- As a user, i want to register as valid Student (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// Verify screen\n(0, _chai.expect)('Student Registration Form').to.exist;\ncy.get(_registerElements[\"default\"].TXT_FIRST_NAME).click().type('test');\ncy.get(_registerElements[\"default\"].TXT_LAST_NAME).click().type('satu'); // Fill first name and last name field\ncy.get(_registerElements[\"default\"].TXT_EMAIL).click().type('testsatu@gmail.com');\ncy.get(_registerElements[\"default\"].BTN_GENDER_MALE).click(); // Select student genders\n// BTN_GENDER_FEMALE for Female gender\n// BTN_GENDER_OTHER for Other gender\ncy.get(_registerElements[\"default\"].TXT_MOBILE_NUMBER).click().type('08123459876'); // Fill mobile number field\ncy.get(_registerElements[\"default\"].TXT_DOB).click();\ncy.get(_registerElements[\"default\"].BTN_MONTH).select('April');\ncy.get(_registerElements[\"default\"].BTN_YEAR).select('1991');\ncy.get(_registerElements[\"default\"].BTN_DATE).click(); // Select DoB\ncy.get(_registerElements[\"default\"].BTN_SUBJECT).click().type('M');\ncy.get(_registerElements[\"default\"].BTN_SELECT_SUBJECT).contains('Maths').click(); // Select student Subject\ncy.get(_registerElements[\"default\"].BTN_HOBBIES_SPORTS).click(); // Select student Hobbies\n// BTN_HOBBIES_MUSIC for select music\n// BTN_HOBBIES_READING for select reading\nvar filepath = 'foto1.jpg';\ncy.get(_registerElements[\"default\"].BTN_PICTURE).attachFile(filepath); // Add student photo\ncy.wait(3000);\ncy.get(_registerElements[\"default\"].TXT_CURRENT_ADDRESS).click().type('Jalan situsaja 4'); // Fill student current address field\ncy.get(_registerElements[\"default\"].BTN_STATE).click();\ncy.get(_registerElements[\"default\"].BTN_STATE_LIST).contains('NCR').click(); // Select State dropdown\ncy.get(_registerElements[\"default\"].BTN_CITY).click();\ncy.get(_registerElements[\"default\"].BTN_CITY_LIST).contains('Delhi').click(); // Select City dropdown\ncy.get(_registerElements[\"default\"].BTN_SUBMIT).click();\ncy.wait(2000);\ncy.screenshot('Success');\ncy.get(_registerElements[\"default\"].BTN_CLOSE).click();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10050ms: `cy.click()` failed because this element:\n\n`<button id=\"submit\" type=\"submit\" class=\"btn btn-primary\">Submit</button>`\n\nis being covered by another element:\n\n`<div>...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 10050ms: `cy.click()` failed because this element:\n\n`<button id=\"submit\" type=\"submit\" class=\"btn btn-primary\">Submit</button>`\n\nis being covered by another element:\n\n`<div>...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://demoqa.com/__cypress/runner/cypress_runner.js:162656:26)\n    at ensureDescendents (https://demoqa.com/__cypress/runner/cypress_runner.js:151114:8)\n    at ensureDescendentsAndScroll (https://demoqa.com/__cypress/runner/cypress_runner.js:151121:14)\n    at ensureElIsNotCovered (https://demoqa.com/__cypress/runner/cypress_runner.js:151255:5)\n    at runAllChecks (https://demoqa.com/__cypress/runner/cypress_runner.js:151404:52)\n    at retryActionability (https://demoqa.com/__cypress/runner/cypress_runner.js:151427:16)\n    at tryCatcher (https://demoqa.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Function.Promise.attempt.Promise.try (https://demoqa.com/__cypress/runner/cypress_runner.js:8039:29)\n    at tryFn (https://demoqa.com/__cypress/runner/cypress_runner.js:167007:21)\n    at whenStable (https://demoqa.com/__cypress/runner/cypress_runner.js:167045:12)\n    at https://demoqa.com/__cypress/runner/cypress_runner.js:166540:16\n    at tryCatcher (https://demoqa.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://demoqa.com/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://demoqa.com/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://demoqa.com/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://demoqa.com/__cypress/runner/cypress_runner.js:8882:18)\nFrom Your Spec Code:\n    at Context.eval (https://demoqa.com/__cypress/tests?p=cypress/integration/Register/register.js:14293:53)",
+                "diff": null
+              },
+              "uuid": "916c5828-063d-4d84-99df-4e7407133f6c",
+              "parentUUID": "754865f1-77e1-4639-82e5-1d8a3050139d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "916c5828-063d-4d84-99df-4e7407133f6c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27157,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
